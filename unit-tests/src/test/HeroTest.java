@@ -34,12 +34,12 @@ public class HeroTest {
 	}
 
 	@Test
-	public void testHeroLevelUp() {
+	public void testHeroLevelUp() throws Exception {
 		// TODO
 	}
 
 	@Test
-	public void testHeroProperties() {
+	public void testHeroProperties() throws Exception {
 		Hero hero = new Hero("Jaina Portvaillant");
 		assertThat(hero, hasProperty("name"));
         assertThat(hero, hasProperty("name", is("Jaina Portvaillant")));
