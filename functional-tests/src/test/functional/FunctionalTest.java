@@ -26,14 +26,18 @@ public class FunctionalTest {
   		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
      }
 
-    // Test de la Story Page de Recherche (trello #1)
+    // Test de la Story #1-homepage (https://trello.com/c/WKTneu9o/1-homepage)
 	@Test
-    public void testPageRecherche() throws Exception {
-        driver.get("https://www.meetup.com/fr-FR/find/");
-		assertEquals(driver.getTitle(), "Rencontrez de nouvelles têtes | Meetup");
+    public void testHomepage() throws Exception {
+        driver.get("https://www.meetup.com/fr-FR/");
+		assertEquals(driver.getTitle(), "Partagez vos passions | Meetup");
 		// TODO
 		// To Be Completed By Coders From Coding Factory
     }
+
+    // Test de la Story n ...
+    // TODO
+    // To Be Completed By Coders From Coding Factory
 
     @After
     public void tearDown() throws Exception {
