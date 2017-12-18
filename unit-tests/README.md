@@ -22,16 +22,16 @@ source ~/.bash_profile
 ## First of all, you need to compile your src classes and test cases (from src folder):
 
 ```sh
-    # Important, to avoid compile errors
-	cd src/
+# Important, to avoid compile errors
+cd src/
 
-	### Classes
-	javac -d ../bin/ codingfactory/rpgconsole/enemy/*.java
-	javac -d ../bin/ codingfactory/rpgconsole/hero/*.java
-	javac -d ../bin/ codingfactory/rpgconsole/game/*.java
+### Classes
+javac -d ../bin/ codingfactory/rpgconsole/enemy/*.java
+javac -d ../bin/ codingfactory/rpgconsole/hero/*.java
+javac -d ../bin/ codingfactory/rpgconsole/game/*.java
 
-	### Tests
-	javac -d ../bin/ HeroTest.java
+### Tests
+javac -d ../bin/ HeroTest.java
 ```
 
 ## Play with the Java App (from bin folder)

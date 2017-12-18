@@ -35,13 +35,13 @@ source ~/.bash_profile
 
 ## First of all, you need to compile your test class (from src folder)
 
-	```sh
-    # Important, to avoid compile errors
-	cd src/
+```sh
+# Important, to avoid compile errors
+cd src/
 
-	### Classes
-	javac -d ../bin/ test/functional/FunctionalTest.java
-	```
+### Classes
+javac -d ../bin/ test/functional/FunctionalTest.java
+```
 
 ## Then run your test cases (from bin tests folder)
 
