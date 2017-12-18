@@ -14,6 +14,7 @@ sudo chmod 755 /Library/Java/JUNIT/*
 
 ```sh
 vim ~/.bash_profile
+# Put this line at the end of file
 export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:.
 source ~/.bash_profile
 ```
