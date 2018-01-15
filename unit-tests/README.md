@@ -6,7 +6,7 @@ mkdir JUNIT
 cd JUNIT/
 sudo wget https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar
 sudo wget http://central.maven.org/maven2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar
-sudo chown $USER:$USER /Library/Java/JUNIT/*
+sudo chown $USER /Library/Java/JUNIT/*
 sudo chmod 755 /Library/Java/JUNIT/*
 ```
 
@@ -38,7 +38,7 @@ javac -d ../bin/ HeroTest.java
 
 ```sh
 cd bin/
-java bin/codingfactory.rpgconsole.game.Starter
+java codingfactory.rpgconsole.game.Starter
 ```
 
 ## Then run your test cases (from bin tests folder)
