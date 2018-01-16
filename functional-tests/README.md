@@ -3,6 +3,7 @@
 ```sh
 cd /Library/Java/JUNIT/
 sudo mkdir selenium
+sudo wget http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar
 sudo wget http://selenium-release.storage.googleapis.com/3.8/selenium-java-3.8.1.zip
 sudo unzip selenium-java-3.8.1.zip -d selenium
 sudo chmod 755 selenium/libs selenium/libs/*
