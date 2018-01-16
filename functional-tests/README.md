@@ -2,18 +2,18 @@
 
 ```sh
 cd /Library/Java/JUNIT/
-mkdir selenium
+sudo mkdir selenium
 sudo wget http://selenium-release.storage.googleapis.com/3.8/selenium-java-3.8.1.zip
 sudo unzip selenium-java-3.8.1.zip -d selenium
-sudo chmod 755 selenium/libs
+sudo chmod 755 selenium/libs selenium/libs/*
 sudo wget https://chromedriver.storage.googleapis.com/2.34/chromedriver_mac64.zip
 sudo unzip chromedriver_mac64.zip
 sudo rm chromedriver_mac64.zip
 mv selenium/client-combined*.jar .
 mv selenium/libs/* .
 sudo rm -r selenium-java-3.8.1.zip selenium/
-sudo chown $USER:$USER /Library/Java/JUNIT/*
-sudo chmod 755 /Library/Java/JUNIT/*
+sudo chown $USER /Library/Java/JUNIT /Library/Java/JUNIT/*
+sudo chmod 755 /Library/Java/JUNIT /Library/Java/JUNIT/*
 ```
 
 ## Selenium configuration for Junit
@@ -21,15 +21,14 @@ sudo chmod 755 /Library/Java/JUNIT/*
 ```sh
 vim ~/.bash_profile
 
-# delete this line at the end of file
+# DELETE this line at the end of file
 export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:.
 
-# Put this line at the end of file
+# Instead old line, put this line at the end of file
 export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:/Library/Java/JUNIT/chromedriver:/Library/Java/JUNIT/client-combined-3.8.1.jar:/Library/Java/JUNIT/client-combined-3.8.1-sources.jar:/Library/Java/JUNIT/selenium-server-standalone-3.8.1.jar:.
 
-# Save and Quit VIM
-
-# Refresh Bash Conf
+# Save file and exit VIM by doing: esc : wq!
+# Refresh terminal config
 source ~/.bash_profile
 ```
 

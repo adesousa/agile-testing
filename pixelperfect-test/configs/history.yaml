@@ -8,8 +8,8 @@
 # making sure your site's appearance remains consistent over
 # time.
 #
-# `wraith history history.yaml` # generate base screenshots
-# `wraith latest history.yaml`  # take new shots and compare
+# `wraith history configs/history.yaml` # generate base screenshots
+# `wraith latest configs/history.yaml`  #
 #
 ##############################################################
 ##############################################################
@@ -24,7 +24,7 @@ domains:
 # (required) The paths to capture. This particular config is using casperjs, so we can take screenshots of selectors rather than the entire page.
 paths:
   media:
-    path: /media
+    path: /
 
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--chrome.js'
