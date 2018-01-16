@@ -50,12 +50,12 @@ public class Game {
                         enemy.attack(hero);
                     }
                 } else if (c.equals('m')){
-                    Integer maxAttack = hero.getAttack() + hero.getLevel();
+                    Integer maxAttack = hero.getAtk() + hero.getLevel();
                     System.out.println("*** Hero Infos ***");
                     System.out.println(hero.getName());
                     System.out.println("(LEVEL: " + hero.getLevel() + ")");
                     System.out.println("(HP: " + hero.getHp() + ")");
-                    System.out.println("(ATTACK: Between " + hero.getAttack() + " and " + maxAttack + ")");
+                    System.out.println("(ATTACK: Between " + hero.getAtk() + " and " + maxAttack + ")");
                 }
             }
         }

@@ -2,12 +2,12 @@
 
 ```sh
 cd /Library/Java/
-mkdir JUNIT
+sudo mkdir JUNIT
 cd JUNIT/
 sudo wget https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar
 sudo wget http://central.maven.org/maven2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar
 sudo chown $USER /Library/Java/JUNIT/*
-sudo chmod 755 /Library/Java/JUNIT/*
+sudo chmod 755 /Library/Java/JUNIT /Library/Java/JUNIT/*
 ```
 
 ## Junit & Hamcrest Configuration
@@ -16,6 +16,8 @@ sudo chmod 755 /Library/Java/JUNIT/*
 vim ~/.bash_profile
 # Put this line at the end of file
 export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:.
+# Save file and exit VIM by doing: esc : wq!
+# Refresh terminal config
 source ~/.bash_profile
 ```
 

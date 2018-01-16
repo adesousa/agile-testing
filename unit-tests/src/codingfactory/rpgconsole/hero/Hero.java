@@ -29,7 +29,7 @@ public class Hero {
         return this.level;
     }
 
-    public Integer getAttack(){
+    public Integer getAtk(){
         return this.atk;
     }
 

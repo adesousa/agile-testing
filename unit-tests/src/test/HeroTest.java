@@ -13,6 +13,8 @@ import codingfactory.rpgconsole.hero.Hero;
 
 public class HeroTest {
 
+	Hero hero;
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		System.out.println("Avant le démarrage");
@@ -25,6 +27,7 @@ public class HeroTest {
 
 	@Before
 	public void setUp() throws Exception {
+		hero = new Hero("Jaina Portvaillant");
 		System.out.println("Avant un test");
 	}
 
@@ -40,7 +43,6 @@ public class HeroTest {
 
 	@Test
 	public void testHeroProperties() throws Exception {
-		Hero hero = new Hero("Jaina Portvaillant");
 		assertThat(hero, hasProperty("name"));
         assertThat(hero, hasProperty("name", is("Jaina Portvaillant")));
 	}
