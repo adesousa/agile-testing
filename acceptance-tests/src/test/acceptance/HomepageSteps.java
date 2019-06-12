@@ -29,7 +29,8 @@ public class HomepageSteps {
 	public void beforeScenario() {
 		System.setProperty("webdriver.chrome.driver","/Library/Java/JUNIT/chromedriver");
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		// Seems no more working in last Chrome versions
+		// driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
