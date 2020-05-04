@@ -14,7 +14,7 @@ cd /Library/Java/
 sudo mkdir JUNIT
 cd JUNIT/
 sudo wget https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar
-sudo wget http://central.maven.org/maven2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar
+sudo wget repo1.maven.org/maven2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar
 sudo chown $USER /Library/Java/JUNIT/*
 sudo chmod 755 /Library/Java/JUNIT /Library/Java/JUNIT/*
 ```
