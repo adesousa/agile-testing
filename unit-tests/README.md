@@ -42,7 +42,7 @@ javac -d ../bin/ codingfactory/rpgconsole/hero/*.java
 javac -d ../bin/ codingfactory/rpgconsole/game/*.java
 
 ### Tests
-javac -d ../bin/ HeroTest.java
+javac -d ../bin/ test/HeroTest.java
 ```
 
 ## Play with the Java App (from bin folder)
