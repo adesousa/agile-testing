@@ -30,6 +30,17 @@ export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest
 source ~/.bash_profile
 ```
 
+## Clone the repository on your computer
+
+Clone the project 
+```sh
+git clone https://github.com/adesousa/agile-testing.git
+# OR clone a fork of the project if you want to work on a remote repository with other people: 
+git clone https://github.com/###/agile-testing.git
+
+cd agile-testing/
+```
+
 ## First of all, you need to compile your src classes and test cases (from src folder):
 
 ```sh
