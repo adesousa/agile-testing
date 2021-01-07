@@ -1,5 +1,7 @@
 ## Download Cucumber
 
+In some cases the following wget commands need https instead of http to download the jar files.
+
 ```sh
 cd /Library/Java/JUNIT
 sudo wget http://repo1.maven.org/maven2/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar
