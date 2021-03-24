@@ -10,6 +10,7 @@ sudo chmod 755 selenium/libs
 sudo chmod 755 selenium/libs/*
 version=$(/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version | sed 's/Google Chrome //; s/ *$//g')
 sudo wget https://chromedriver.storage.googleapis.com/$version/chromedriver_mac64.zip
+# if you cannot succeed in downloading the chromedriver above this line use this instead: sudo wget https://chromedriver.storage.googleapis.com/2.39/chromedriver_mac64.zip
 sudo unzip chromedriver_mac64.zip
 sudo rm chromedriver_mac64.zip
 sudo mv selenium/client-combined*.jar .
