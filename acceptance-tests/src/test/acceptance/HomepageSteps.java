@@ -2,6 +2,8 @@ package test.acceptance;
 
 import java.util.concurrent.TimeUnit;
 
+import java.lang.*;
+
 import org.junit.Test;
 
 import cucumber.api.java.After;
@@ -27,7 +29,8 @@ public class HomepageSteps {
 	public void beforeScenario() {
 		System.setProperty("webdriver.chrome.driver","/Library/Java/JUNIT/chromedriver");
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		// Seems no more working in last Chrome versions
+		// driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
@@ -41,10 +44,10 @@ public class HomepageSteps {
 	    assertEquals(driver.getTitle(), arg1);
 	}
 
-	@Then("^la description doit être \"([^\"]*)\"$")
+	@Then("^la description contient \"([^\"]*)\"$")
 	public void la_description_doit_être(String arg1) throws Throwable {
 		// By CSS Selector
-	    assertEquals(driver.findElement(By.cssSelector("meta[name='description']")).getAttribute("content"), arg1);
+		assertTrue(driver.findElement(By.cssSelector("meta[name='description']")).getAttribute("content").contains(arg1));
 		// By XPATH, si vous préférez...
 	    // assertEquals(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"), arg1);
 	}
