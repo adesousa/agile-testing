@@ -14,18 +14,16 @@ sudo chmod 755 /Library/Java/JUNIT/*
 ## Selenium configuration for Junit
 
 ```sh
-vim ~/.bash_profile
+# This 2 sed commands replace the old classpath line by this new one in the 2 profile files (zsh_profile and bash_profile):
+#export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:/Library/Java/JUNIT/chromedriver:/Library/Java/JUNIT/client-combined-3.8.1.jar:/Library/Java/JUNIT/client-combined-3.8.1-sources.jar:/Library/Java/JUNIT/selenium-server-standalone-3.8.1.jar:/Library/Java/JUNIT/cucumber-java-1.2.5.jar:/Library/Java/JUNIT/cucumber-junit-1.2.5.jar:/Library/Java/JUNIT/cucumber-core-1.2.5.jar:/Library/Java/JUNIT/gherkin-2.12.2.jar:/Library/Java/JUNIT/cucumber-jvm-deps-1.0.5.jar:.
 
-# delete this line at the end of file
-export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:/Library/Java/JUNIT/chromedriver:/Library/Java/JUNIT/client-combined-3.8.1.jar:/Library/Java/JUNIT/client-combined-3.8.1-sources.jar:/Library/Java/JUNIT/selenium-server-standalone-3.8.1.jar:.
+sed -i'.backup'-e 's/CLASSPATH=\/Library\/Java\/JUNIT\/junit-4.12.jar:\/Library\/Java\/JUNIT\/hamcrest-all-1.3.jar:\/Library\/Java\/JUNIT\/chromedriver:\/Library\/Java\/JUNIT\/client-combined-3.8.1.jar:\/Library\/Java\/JUNIT\/client-combined-3.8.1-sources.jar:\/Library\/Java\/JUNIT\/selenium-server-standalone-3.8.1.jar:./CLASSPATH=\/Library\/Java\/JUNIT\/junit-4.12.jar:\/Library\/Java\/JUNIT\/hamcrest-all-1.3.jar:\/Library\/Java\/JUNIT\/chromedriver:\/Library\/Java\/JUNIT\/client-combined-3.8.1.jar:\/Library\/Java\/JUNIT\/client-combined-3.8.1-sources.jar:\/Library\/Java\/JUNIT\/selenium-server-standalone-3.8.1.jar:\/Library\/Java\/JUNIT\/cucumber-java-1.2.5.jar:\/Library\/Java\/JUNIT\/cucumber-junit-1.2.5.jar:\/Library\/Java\/JUNIT\/cucumber-core-1.2.5.jar:\/Library\/Java\/JUNIT\/gherkin-2.12.2.jar:\/Library\/Java\/JUNIT\/cucumber-jvm-deps-1.0.5.jar:./g' ~/.zsh_profile
 
-# Put this line at the end of file
-export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:/Library/Java/JUNIT/chromedriver:/Library/Java/JUNIT/client-combined-3.8.1.jar:/Library/Java/JUNIT/client-combined-3.8.1-sources.jar:/Library/Java/JUNIT/selenium-server-standalone-3.8.1.jar:/Library/Java/JUNIT/cucumber-java-1.2.5.jar:/Library/Java/JUNIT/cucumber-junit-1.2.5.jar:/Library/Java/JUNIT/cucumber-core-1.2.5.jar:/Library/Java/JUNIT/gherkin-2.12.2.jar:/Library/Java/JUNIT/cucumber-jvm-deps-1.0.5.jar:.
+sed -i'.backup'-e 's/CLASSPATH=\/Library\/Java\/JUNIT\/junit-4.12.jar:\/Library\/Java\/JUNIT\/hamcrest-all-1.3.jar:\/Library\/Java\/JUNIT\/chromedriver:\/Library\/Java\/JUNIT\/client-combined-3.8.1.jar:\/Library\/Java\/JUNIT\/client-combined-3.8.1-sources.jar:\/Library\/Java\/JUNIT\/selenium-server-standalone-3.8.1.jar:./CLASSPATH=\/Library\/Java\/JUNIT\/junit-4.12.jar:\/Library\/Java\/JUNIT\/hamcrest-all-1.3.jar:\/Library\/Java\/JUNIT\/chromedriver:\/Library\/Java\/JUNIT\/client-combined-3.8.1.jar:\/Library\/Java\/JUNIT\/client-combined-3.8.1-sources.jar:\/Library\/Java\/JUNIT\/selenium-server-standalone-3.8.1.jar:\/Library\/Java\/JUNIT\/cucumber-java-1.2.5.jar:\/Library\/Java\/JUNIT\/cucumber-junit-1.2.5.jar:\/Library\/Java\/JUNIT\/cucumber-core-1.2.5.jar:\/Library\/Java\/JUNIT\/gherkin-2.12.2.jar:\/Library\/Java\/JUNIT\/cucumber-jvm-deps-1.0.5.jar:./g' ~/.bash_profile
 
-# Save and Quit VIM
+# Refresh Bash and zsh Conf
+source ~/.bash_profile ~/.zsh_profile
 
-# Refresh Bash Conf
-source ~/.bash_profile
 ```
 
 ## First of all, you need to compile your test class (from src folder)

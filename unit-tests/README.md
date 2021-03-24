@@ -13,12 +13,11 @@ sudo chmod 755 /Library/Java/JUNIT /Library/Java/JUNIT/*
 ## Junit & Hamcrest Configuration
 
 ```sh
-vim ~/.bash_profile
-# Put this line at the end of file
-export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:.
-# Save file and exit VIM by doing: esc : wq!
-# Refresh terminal config
-source ~/.bash_profile
+# creating or appending into bash and zsh config the classpath for junit and hamcrest
+echo "export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:." >> ~/.bash_profile
+echo "export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest-all-1.3.jar:." >> ~/.zsh_profile
+# Refresh terminal config for both bash and zsh
+source ~/.bash_profile ~/.zsh_profile 
 ```
 
 ## First of all, you need to compile your src classes and test cases (from src folder):
