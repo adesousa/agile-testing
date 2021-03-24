@@ -6,11 +6,11 @@ import java.util.Random;
 public class Enemy {
 
     private String name;
-    private Integer level;
-    private Integer hp;
-    private Integer atk;
+    private int level;
+    private int hp;
+    private int atk;
 
-    public Enemy(String name, Integer level){ //construct
+    public Enemy(String name, int level){ //construct
         this.name = name;
         this.level = level;
         this.hp = 15*level;
@@ -21,11 +21,11 @@ public class Enemy {
         return this.name;
     }
 
-    public Integer getHp(){
+    public int getHp(){
         return this.hp;
     }
 
-    public void takeDamage(Integer damage){
+    public void takeDamage(int damage){
         this.hp -= damage;
     }
 

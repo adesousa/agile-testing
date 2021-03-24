@@ -6,9 +6,9 @@ import java.util.Random;
 public class Hero {
 
     private String name;
-    private Integer level;
-    private Integer hp;
-    private Integer atk;
+    private int level;
+    private int hp;
+    private int atk;
 
     public Hero(String name){ //construct
         this.name = name;
@@ -21,23 +21,23 @@ public class Hero {
        return this.name;
     }
 
-    public Integer getHp(){
+    public int getHp(){
         return this.hp;
     }
 
-    public Integer getLevel(){
+    public int getLevel(){
         return this.level;
     }
 
-    public Integer getAtk(){
+    public int getAtk(){
         return this.atk;
     }
 
-    private void setLevel(Integer newLevel) {
+    private void setLevel(int newLevel) {
         this.level = newLevel;
     }
 
-    public void takeDamage(Integer damage){
+    public void takeDamage(int damage){
         this.hp -= damage;
     }
 
