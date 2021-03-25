@@ -9,7 +9,7 @@ sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-junit/1.2.5/cucumbe
 sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar
 sudo wget https://repo1.maven.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar
 sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar
-sudo chown $USER:$USER /Library/Java/JUNIT/*
+sudo chown $USER /Library/Java/JUNIT/*
 sudo chmod 755 /Library/Java/JUNIT/*
 ```
 
