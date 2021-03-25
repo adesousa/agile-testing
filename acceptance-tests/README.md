@@ -4,11 +4,11 @@ In some cases the following wget commands need https instead of http to download
 
 ```sh
 cd /Library/Java/JUNIT
-sudo wget http://repo1.maven.org/maven2/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar
-sudo wget http://repo1.maven.org/maven2/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.jar
-sudo wget http://repo1.maven.org/maven2/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar
-sudo wget http://repo1.maven.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar
-sudo wget http://repo1.maven.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar
 sudo chown $USER:$USER /Library/Java/JUNIT/*
 sudo chmod 755 /Library/Java/JUNIT/*
 ```
