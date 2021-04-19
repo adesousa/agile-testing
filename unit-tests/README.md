@@ -1,3 +1,12 @@
+## HomeBrew Install and wget Install
+```sh
+# Install mac homebrew, to know more read https://brew.sh/index_fr
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install wget in mac
+brew install wget
+```
+
 ## Junit lib & Hamcrest lib Download
 
 ```sh
