@@ -1,20 +1,11 @@
-## HomeBrew Install and wget Install
-```sh
-# Install mac homebrew, to know more read https://brew.sh/index_fr
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install wget in mac
-brew install wget
-```
-
 ## Junit lib & Hamcrest lib Download
 
 ```sh
 cd /Library/Java/
 sudo mkdir JUNIT
 cd JUNIT/
-sudo wget https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar
-sudo wget https://repo1.maven.org/maven2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar
+sudo curl -O https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar
+sudo curl -O https://repo1.maven.org/maven2/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar
 sudo chown $USER /Library/Java/JUNIT/*
 sudo chmod 755 /Library/Java/JUNIT /Library/Java/JUNIT/*
 ```
