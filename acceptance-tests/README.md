@@ -1,14 +1,14 @@
 ## Download Cucumber
 
-In some cases the following curl -H "Accept: application/zip" commands need https instead of http to download the jar files.
+In some cases the following wget commands need https instead of http to download the jar files.
 
 ```sh
 cd /Library/Java/JUNIT
-sudo curl -H "Accept: application/zip" https://repo1.maven.org/maven2/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar > cucumber-java-1.2.5.jar
-sudo curl -H "Accept: application/zip" https://repo1.maven.org/maven2/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.jar > cucumber-junit-1.2.5.jar
-sudo curl -H "Accept: application/zip" https://repo1.maven.org/maven2/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar > cucumber-core-1.2.5.jar
-sudo curl -H "Accept: application/zip" https://repo1.maven.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar > gherkin-2.12.2.jar
-sudo curl -H "Accept: application/zip" https://repo1.maven.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar > cucumber-jvm-deps-1.0.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar
+sudo wget https://repo1.maven.org/maven2/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar
 sudo chown $USER /Library/Java/JUNIT/*
 sudo chmod 755 /Library/Java/JUNIT/*
 ```

@@ -3,14 +3,14 @@
 ```sh
 cd /Library/Java/JUNIT/
 sudo mkdir selenium
-sudo curl -H "Accept: application/zip" http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar > selenium-server-standalone-3.8.1.jar
-sudo curl -H "Accept: application/zip" http://selenium-release.storage.googleapis.com/3.8/selenium-java-3.8.1.zip > selenium-java-3.8.1.zip
+sudo wget http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar
+sudo wget http://selenium-release.storage.googleapis.com/3.8/selenium-java-3.8.1.zip
 sudo unzip selenium-java-3.8.1.zip -d selenium
 sudo chmod 755 selenium/libs
 sudo chmod 755 selenium/libs/*
 version=$(/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version | sed 's/Google Chrome //; s/ *$//g')
-sudo curl -H "Accept: application/zip" https://chromedriver.storage.googleapis.com/$version/chromedriver_mac64.zip > chromedriver_mac64.zip
-# if you cannot succeed in downloading the chromedriver above this line use this instead: sudo curl -H "Accept: application/zip" https://chromedriver.storage.googleapis.com/2.39/chromedriver_mac64.zip > chromedriver_mac64.zip
+sudo wget https://chromedriver.storage.googleapis.com/$version/chromedriver_mac64.zip
+# if you cannot succeed in downloading the chromedriver above this line use this instead: sudo wget https://chromedriver.storage.googleapis.com/2.39/chromedriver_mac64.zip
 sudo unzip chromedriver_mac64.zip
 sudo rm chromedriver_mac64.zip
 sudo mv selenium/client-combined*.jar .
